@@ -2,11 +2,12 @@
 
 namespace HelloCS
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, C#!");
-        }
+      Console.WriteLine("Hello, C#!");
+      Console.Write(typeof(string).Assembly.ImageRuntimeVersion);
     }
+  }
 }

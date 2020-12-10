@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
@@ -6,6 +7,13 @@ using System.Reflection;
 
 namespace Basics
 {
+  public record Person
+  {
+    public string LastName { get; init; }
+    public string FirstName { get; }
+
+    public Person(string first, string last) => (FirstName, LastName) = (first, last);
+  }
   class Program
   {
     static void Main(string[] args)
